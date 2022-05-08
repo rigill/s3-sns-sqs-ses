@@ -1,14 +1,6 @@
-# Welcome to your CDK TypeScript project
+1. endpoint -> (email data) -> create entry in s3
+2. s3 write event -> sns -> sqs(dlq) -> email lambda
 
-This is a blank project for CDK development with TypeScript.
-
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
-
-## Useful commands
-
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `cdk deploy`      deploy this stack to your default AWS account/region
-* `cdk diff`        compare deployed stack with current state
-* `cdk synth`       emits the synthesized CloudFormation template
+TODO
+look into doing batch emails, but need a way to do each email individually
+because i only want to send n emails from each lambda
